@@ -2,26 +2,23 @@
   margin: 0;
   padding: 0;
 }
+
+/* Navbar  */
+
+header {
+  height: 70px;
+  width: 100%;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   position: fixed;
+  top: 0px;
   justify-content: center;
   box-shadow: 0 6px 12px rgba(6, 6, 6, 0.1);
   width: 100%;
   background-color: #fff;
-  height: 70px;
-  z-index: 1;
-}
-
-.change {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  justify-content: center;
-  box-shadow: 0 6px 12px rgba(6, 6, 6, 0.1);
-  width: 100%;
-  background-color: #2d76eb;
   height: 70px;
   z-index: 1;
 }
@@ -51,11 +48,6 @@
   display: inline-block;
   font-family: "Poppins", sans-serif;
   font-size: 19px;
-
-}
-
-.menu {
-  cursor: pointer;
 }
 
 .navbar nav ul li a:hover {
@@ -82,7 +74,9 @@
 }
 
 .dropdown_menu.open {
-  height: 225px;
+  height: 220px;
+  position: fixed;
+  top: 62px;
 }
 
 .dropdown_menu ul li {
@@ -112,60 +106,30 @@
   display: none;
 }
 
+
+
+/* Github link  */
+
+.github-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 55px;
+  flex-direction: column;
+}
+.github-icon h1 {
+  color: red;
+}
+.github-icon a i:hover {
+  color: black;
+  transition: 0.2s ease-in-out;
+}
+
+
+
 /* Media Query */
 
-@media only screen and (max-width: 520px) {
-  .menu {
-    display: block;
-  }
-}
-
-/* .menu{
-display: block;  
-background-image: var("menu.png");
-} */
-
-@media only screen and (max-width: 1200px) {
-  /* body {
-background-color: lightblue;
-} */
-
-  .skills .skillBox h3 {
-    font-size: 17px;
-    width: 15vw;
-  }
-
-  /* 
-.card {
-margin: 10px;
-padding: 50px 55px;
-} */
-
-  .content .text {
-    padding-left: 210px;
-  }
-
-  .content img {
-    padding: 45px 125px;
-  }
-}
-
 @media only screen and (max-width: 1100px) {
-  /* body {
-background-color: wheat;
-} */
-
-  /* .card {
-margin: 10px;
-padding: 40px 30px;
-font-size: 11px;
-
-} */
-
-  .skills .skillBox h3 {
-    width: 180px;
-  }
-
   .navbar nav {
     margin: 0 0px;
   }
@@ -173,69 +137,15 @@ font-size: 11px;
   .navbar nav .name {
     margin-right: 350px;
   }
-
-  .content .text {
-    padding-left: 150px;
-  }
-
-  .content h3 {
-    font-size: 35px;
-  }
-
-  .content h3 {
-    font-size: 35px;
-  }
-
-  .content img {
-    padding: 40px 90px;
-  }
 }
 
 @media only screen and (max-width: 900px) {
-  /* body {
-background-color: darkgray;
-} */
-
-  /* 
-.card {
-margin: 10px;
-padding: 40px 35px;
-}
-
-.card {
-font-size: 11px;
-}
-
-.card img {
-height: 156px;
-} */
-
-  .skills .skillBox h3 {
-    width: 150px;
-  }
-
   .navbar nav {
     margin: 0 0px;
   }
 
   .navbar nav .name {
     margin-right: 200px;
-  }
-
-  .content .text {
-    padding-left: 100px;
-  }
-
-  .content .text h1 {
-    font-size: 33px;
-  }
-
-  .content .text h3 {
-    font-size: 28px;
-  }
-
-  .content img {
-    padding: 40px 50px;
   }
 }
 
@@ -249,29 +159,6 @@ height: 156px;
 @media only screen and (max-width: 650px) {
   .navbar nav ul li {
     margin: 15px 10px;
-  }
-}
-
-@media only screen and (max-width: 582px) {
-  .content {
-    flex-wrap: wrap-reverse;
-  }
-
-  /* .content .text {} */
-
-  .content img {
-    padding: 40px 0px 0px 0px;
-  }
-
-  .content .text {
-    padding: 0 100px;
-  }
-
-  .cards-box {
-    padding: 40px;
-  }
-  .skills .skillBox h3 img {
-    width: 39px;
   }
 }
 
@@ -294,44 +181,25 @@ height: 156px;
   .navbar nav .name {
     margin-right: 200px;
   }
-  .content .text {
-    padding: 0 50px;
-  }
-
-  .content img {
-    height: 25vh;
-  }
-
-  .cards-box {
-    padding: 20px;
-  }
 }
 
 @media only screen and (max-width: 400px) {
   .navbar nav .name {
     margin-right: 150px;
   }
-  .content .text {
-    padding: 0 20px;
-  }
-  .skills .skillBox h3 img {
-    width: 30px;
-  }
-  .skills .skillBox h3 {
-    width: 130px;
-  }
-  .skills .skillBox {
-    align-content: unset;
-    margin: 30px 0;
-  }
 
-  /*   
-.content .text h1 {
-font-size:31px;
-
+  .github-icon{
+    margin:45px 15px;
+  }
+  .github-icon h1{
+    padding: 15px 0;
+    font-size: 20px;
+  }
 }
 
-.content .text h3 {
-font-size: 23px;
-} */
+@media only screen and (max-width: 300px) {
+  .navbar nav .name {
+    margin-right: 120px;
+  }
+ 
 }
